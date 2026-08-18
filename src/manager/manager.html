@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NooBoss - Extension Manager</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 14px; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      min-height: 100vh;
+    }
+    :root {
+      --bg: #ffffff; --bg-secondary: #f3f4f6; --bg-hover: #e5e7eb;
+      --text: #111827; --text-secondary: #6b7280; --border: #e5e7eb;
+      --primary: #6366f1; --primary-hover: #4f46e5; --success: #22c55e;
+      --danger: #ef4444; --warning: #f59e0b;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111827; --bg-secondary: #1f2937; --bg-hover: #374151;
+        --text: #f9fafb; --text-secondary: #9ca3af; --border: #374151;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="./index.tsx"></script>
+</body>
+</html>

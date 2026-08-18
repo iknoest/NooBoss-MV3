@@ -1,0 +1,6 @@
+{
+  "manifest_version": 3,
+  "name": "NooBoss Test Extension",
+  "version": "1.0.0",
+  "description": "A disposable test extension for NooBoss E2E tests"
+}
