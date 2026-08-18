@@ -1,5 +1,40 @@
 # NooBoss MV3
 
+## Handover summary
+Snapshot: 2026-08-18T23:19:37+02:00
+
+### What I did
+- Added a concise handover summary for the repository state and migration risk review.
+- Documented the required privacy controls for local Chrome profile recovery and extension-setting exports.
+- Added a sanitized migration template and extraction guide for safe legacy-data review.
+- Updated the repo to ignore raw JSON dumps and keep all recovered work in disposable local scratch copies.
+
+### What is still going
+- The extension remains a local-only Chrome extension manager with AutoState workflow controls.
+- Legacy migration work is still best done in a disposable browser profile and validated against the current MV3 APIs.
+- No broad automation for raw browser-state recovery is checked into the repo.
+
+### Open items
+- Confirm the final import schema for any recovered settings before shipping a migration utility.
+- Validate imports in a disposable Chrome profile before production use.
+- Review any recovered browser data against current extension APIs and policy constraints.
+
+### Parked items
+- Bulk migration automation for recovered browser data
+- Recovery from unsupported Chrome builds or archived profiles
+- Long-term retention of raw extension-setting dumps outside the repo
+
+### Suggested next steps
+1. Read `docs/EXTRACT_LEGACY_DATA.md` before handling any local profile exports.
+2. Use `migrated-nooboss-import-anon.json` for repo-safe validation and review.
+3. Keep `/migrated-nooboss-import.json` completely out of git history and versioned files.
+4. Revisit migration automation after validating the current extension schema on a disposable profile.
+
+### Import guide
+- Keep `/migrated-nooboss-import.json` out of git history and ignore it in the repository.
+- Use `/migrated-nooboss-import-anon.json` for code review and safe import tests.
+- Replace any example extension IDs with the user's actual IDs only in a throwaway local profile outside version control.
+
 A modern Manifest V3 Chrome extension for efficiently managing installed extensions, grouping them by workflow, and applying AutoState URL rules without a cloud dependency.
 
 ## What it does

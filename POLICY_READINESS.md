@@ -42,6 +42,15 @@ In restricted or sandboxed environments, Chrome may refuse to load unpacked exte
 - It never attempts to disable or uninstall itself.
 - It respects the `mayDisable` and `mayEnable` states exposed by Chrome's management API.
 
+## Handover
+
+This repository snapshot is aligned with the expected security and privacy controls for browser-extension migration work. The intent is to keep local data extraction limited to disposable, user-controlled profiles and to avoid committing any personal identifiers to git history.
+
+- Security review: recovered extension settings, profile metadata, and Chrome database dumps must be treated as sensitive local data.
+- Sensitive-data handling: no names, emails, account IDs, extension IDs, or personal group names should be committed to the repository.
+- Confirmation: raw migration JSONs must be removed from commits or ignored in `.gitignore` before they can be shared. Only anonymized exports are acceptable in version control.
+- Safe practice: replace real extension IDs with `EXT_<n>` placeholders and group names with `GROUP_<n>` or neutral labels before review or import.
+
 ## Conclusion
 
 The project is structurally aligned with MV3 and Chrome's modern extension policy model. Live automation testing is environment-dependent, but the extension is designed to be policy-aware, local-only, and compliant with the project requirements.

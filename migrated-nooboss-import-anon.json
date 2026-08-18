@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "sanitized": true,
+    "format": "example",
+    "note": "This file is intentionally anonymized and safe to commit. Replace any user-specific IDs only in a local throwaway profile.",
+    "source": "legacy-chrome-profile-example"
+  },
+  "counts": {
+    "groups": 3,
+    "extensions": 6,
+    "sites": 2
+  },
+  "groups": [
+    {
+      "id": "GROUP_1",
+      "label": "Ad-related tools",
+      "extensions": [
+        "EXT_1",
+        "EXT_2"
+      ]
+    },
+    {
+      "id": "GROUP_2",
+      "label": "Productivity add-ons",
+      "extensions": [
+        "EXT_3",
+        "EXT_4"
+      ]
+    },
+    {
+      "id": "GROUP_3",
+      "label": "Utility scripts",
+      "extensions": [
+        "EXT_5",
+        "EXT_6"
+      ]
+    }
+  ],
+  "sites": [
+    {
+      "name": "example.com",
+      "group": "GROUP_1"
+    },
+    {
+      "name": "support.example.net",
+      "group": "GROUP_2"
+    }
+  ]
+}
